@@ -1,18 +1,22 @@
 // calculated the total price
-const kit = document.getElementById('kit');
-const sports = document.getElementById('sports');
-const totalPrice = kit + sports;
-console.log(totalPrice);
 
-// coupon code applied
-function applyCoupon() {
-    const couponCode = document.getElementById('couponCode').value;
-    if (couponCode === 'SELL200' && totalPrice >= 200) {
-        // Apply a 20% discount
-        totalPrice *= 0.8;
-        document.getElementById('totalPrice').textContent = totalPrice.toFixed(2) + ' TK';
-        alert('Coupon applied successfully!');
-    } else {
-        alert('Invalid coupon code or total price is less than 200 TK.');
+
+// get references to the input and apply buttons
+const couponInput = document.getElementById('couponInput');
+const applyCoupon = document.getElementById('applyCoupon');
+
+// add an eventlistener to input field
+couponInput.addEventListener('input', function(){
+    const enteredCouponCode = couponInput.value.trim();
+
+    // check the coupon code is 'SELL200'
+
+    if(enteredCouponCode === 'SELL200'){
+        // enable the apply button
+        applyCoupon.disabled = false;
     }
-}
+    else{
+        // disable the apply button
+        applyCoupon.disabled = true;
+    }
+});
