@@ -9,9 +9,9 @@ const applyCoupon = document.getElementById('applyCoupon');
 couponInput.addEventListener('input', function(){
     const enteredCouponCode = couponInput.value.trim();
 
-    // check the coupon code is 'SELL200'
+    // check the totalprice is greater than or equal to 200 then write the coupon code is 'SELL200' and apply button is enabled
 
-    if(enteredCouponCode === 'SELL200'){
+    if(totalPrice >=200.00 || enteredCouponCode === 'SELL200'){
         // enable the apply button
         applyCoupon.disabled = false;
     }
@@ -98,6 +98,19 @@ function calculatePriceAndDiscount(cardIndex){
     totalOutput.textContent = `Total Price: ${totalPrice.toFixed(2)} TK`;
     discountOutput.textContent = `Discount: ${discount.toFixed(2)} TK`;
     resultOutput.textContent = `Total: ${total.toFixed(2)} TK`;
+
+    const enteredCouponCode = couponInput.value.trim();
+
+    // check the totalprice is greater than or equal to 200 then write the coupon code is 'SELL200' and apply button is enabled
+
+    if(totalPrice >=200.00 || enteredCouponCode === 'SELL200'){
+        // enable the apply button
+        applyCoupon.disabled = false;
+    }
+    else{
+        // disable the apply button
+        applyCoupon.disabled = true;
+    }
 }
 
 // function to clear the previous results and resets variables
