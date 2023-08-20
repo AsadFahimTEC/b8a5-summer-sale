@@ -1,6 +1,3 @@
-// calculated the total price
-
-
 // get references to the input and apply buttons
 const couponInput = document.getElementById('couponInput');
 const applyCoupon = document.getElementById('applyCoupon');
