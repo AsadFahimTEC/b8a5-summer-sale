@@ -165,22 +165,24 @@
                             <li id="resultOutput">Total:</li>
                         </ol>
                         <hr>
-                            <!--<button id="make-purchase" class="purchase mt-4 rounded-lg bg-[#E527B2] text-[#FFF] text-center font-semibold text-xl p-4 disabled:opacity-40" disabled>Make Purchase</button>-->
 
-                            <!--modal section-->
-     <!-- Open the modal using ID.showModal() method -->
-<button onclick="my_modal_1.showModal()" class="btn-purchase mt-4 rounded-lg bg-[#E527B2] text-[#FFF] text-center font-semibold text-xl p-4 disabled:opacity-40" disabled>Make Purchase</button>
+                        <button onclick="my_modal_1.showModal()" id="make-purchase" class="btn-purchase mt-4 rounded-lg bg-[#E527B2] text-[#FFF] text-center font-semibold text-xl p-4 disabled:opacity-40" disabled>Make Purchase</button>
 <dialog id="my_modal_1" class="modal">
   <form method="dialog" class="modal-box">
     <img class="mx-auto" src="./images/congo.png" alt="">
     <p class="text-center text-[#111] text-5xl py-4 font-bold">Congratulations</p>
     <h3 class="mt-2 text-center text-[gray] text-xl font-normal">Your Purchase the product</h3>
     <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button id="go-home" class="text-center mt-4 rounded-lg bg-[#E527B2] text-[#FFF] font-semibold text-xl p-4">Go Home</button>  
+      <!-- if there is a button in form, it will go to the home -->
+      <button id="go-home" class="mx-auto mt-4 rounded-lg bg-[#E527B2] text-[#FFF] font-semibold text-xl p-4"><a href="./index.html" target="_blank">Go Home</a></button>  
     </div>
   </form>
 </dialog>
+                           
+
+                            <!--modal section-->
+     <!-- Open the modal using ID.showModal() method -->
+
                     </div>
     
             </div>

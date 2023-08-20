@@ -77,6 +77,8 @@ card6.addEventListener('click',function(){
 const totalOutput = document.getElementById('totalOutput');
 const discountOutput = document.getElementById('discountOutput');
 const resultOutput = document.getElementById('resultOutput');
+// get reference of make purchase button
+const makePurchase = document.getElementById('make-purchase');
 
 // define the prices and discount rate
 const prices = [39.00, 25.00, 49.00, 49.00, 69.00, 159.00];
@@ -98,6 +100,19 @@ function calculatePriceAndDiscount(cardIndex){
     totalOutput.textContent = `Total Price: ${totalPrice.toFixed(2)} TK`;
     discountOutput.textContent = `Discount: ${discount.toFixed(2)} TK`;
     resultOutput.textContent = `Total: ${total.toFixed(2)} TK`;
+
+
+    // if total price is greater than 0 then enabled the make purchase button
+
+    if(totalPrice > 0.00 ){
+        // enable the make purchase button
+        makePurchase.disabled = false;
+    }
+
+    else{
+        // disable the make purchase button
+        makePurchase.disabled = true;
+    }
 
     const enteredCouponCode = couponInput.value.trim();
 
@@ -146,3 +161,6 @@ card5.addEventListener('click', function(){
 card6.addEventListener('click', function(){
     calculatePriceAndDiscount(5);
 });
+
+
+
