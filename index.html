@@ -47,7 +47,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card1" class="card-title text-[#111] text-xl font-semibold">K. Accessories</h2>
                       <p class="text-center text-[gray] text-xl font-normal">39.00 TK</p>
                     </div>
@@ -63,7 +63,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card2" class="card-title text-[#111] text-xl font-semibold">K. Accessories</h2>
                       <p class="text-center text-[gray] text-xl font-normal">25.00 TK</p>
                     </div>
@@ -79,7 +79,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card3" class="card-title text-[#111] text-xl font-semibold">Home Cooker</h2>
                       <p class="text-center text-[gray] text-xl font-normal">49.00 TK</p>
                     </div>
@@ -100,7 +100,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card4" class="card-title text-[#111] text-xl font-semibold">Sports Back Cap</h2>
                       <p class="text-center text-[gray] text-xl font-normal">49.00 TK</p>
                     </div>
@@ -116,7 +116,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card5" class="card-title text-[#111] text-xl font-semibold">Full Jersey Set</h2>
                       <p class="text-center text-[gray] text-xl font-normal">69.00 TK</p>
                     </div>
@@ -132,7 +132,7 @@
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                    <div class="card-body mx-auto">
+                    <div class="card-body item mx-auto">
                       <h2 id="card6" class="card-title text-[#111] text-xl font-semibold">Sports cates</h2>
                       <p class="text-center text-[gray] text-xl font-normal">159.00 TK</p>
                     </div>
@@ -146,22 +146,24 @@
            <!--coupon section start-->
            <section>
                     <!--coupon code-->
-                    <div>
-                        <h1 class="ml-12 mt-8 text-[#111] text-xl font-medium">Have coupon?</h1>
-                        <input id="couponInput" type="text" class="rounded ml-10 text-[gray] text-xl font-normal" name="" id="" placeholder="Coupon code" >
-                    </input>
-                        <button id="applyCoupon" class=" rounded-lg bg-[#E527B2] text-[#FFF] mt-4 ml-10 text-center font-semibold text-xl p-4 disabled:opacity-40" disabled>Apply</button>  
+                  <div class="mt-14 ml-10 card w-90 bg-base-70 shadow-xl">
+                    <h1 class="ml-6 mt-8 text-[#111] text-xl font-medium">Have coupon?</h1>
+            
+                    <div class="card-body item mx-auto">
+                      <input id="couponInput" type="text" class="rounded p-4 text-[gray] text-xl font-normal" name="" id="" placeholder="Coupon code" >
+                      <button id="applyCoupon" class=" rounded-lg bg-[#E527B2] text-[#FFF] mt-4 text-center font-semibold text-xl p-4 disabled:opacity-40" disabled>Apply</button>  
                     </div>
-    
-                    <div class="flex flex-col ml-10">
-                        <ol id="output" class="text-[#111] text-2xl font-medium">
-                            <li>1.</li>
-                            <li>2.</li>
-                            <li>3.</li>
-                        </ol>
+                  </div>
+
+                    <div class="mt-10 flex flex-col ml-10">
+
+                        <ol id="orderItems" class="text-[#111] text-2xl font-medium">
+                      </ol>
+                      <hr>
+
                         <ol class="text-[#111] text-2xl font-medium">
                             <li id="totalOutput">Total price:</li>
-                            <li id="discountOutput">Discount :</li>
+                            <li id="discountOutput">Discount:</li>
                             <li id="resultOutput">Total:</li>
                         </ol>
                         <hr>
@@ -180,7 +182,7 @@
 </dialog>
                            
 
-                            <!--modal section-->
+                          <!--modal section-->
      <!-- Open the modal using ID.showModal() method -->
 
                     </div>
